@@ -1,0 +1,180 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+html{
+    scroll-behavior: smooth;
+    font-size: 100%;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+
+/* hero section */
+
+#hero{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;align-items: center;
+    text-align: center;
+}
+
+#hero::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/resto.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: brightness(80%);
+}
+
+#hero_content{
+    position: absolute;
+}
+
+#hero_content h1{
+    color: white;
+    font-size: 2.8rem;
+    text-shadow: 2px 2px 2px #000;
+}
+
+#hero_content h2{
+    color: white;
+    font-size: 2rem;
+    font-family: cursive;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+}
+
+#hero_content a{
+    color: white;
+    padding: 3px 20px 3px 20px;
+    text-decoration: none;
+    border: 3px solid red;
+    font-size: 1.5rem;
+    border-radius: 25px;
+}
+
+#hero_content h1 span{
+    color: red;
+}
+
+#hero_content a:hover{
+    background: red;
+}
+
+/* ==================== */
+
+/*  Header Section */
+
+#header{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 70px;
+    line-height: 70px;
+}
+
+#navbar{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(0,0,0, 0.5);
+}
+
+#navbar h1{
+    color: orange;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 2px #000;
+    font-family: cursive;
+    
+}
+
+#navbar ul{
+     display: flex;
+}
+
+#navbar ul li{
+    list-style: none;
+    padding: 3px 15px 3px 15px;
+}
+
+#navbar ul li :hover{
+    color: orange;
+}
+
+#navbar ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+}
+
+#phone a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    padding: 3px 15px 3px 15px;
+    border: 1px solid orange;
+}
+
+#phone a:hover, #mobile_menu ul li:hover{
+    color: white;
+    background-color: orange;
+    border-radius: 2rem;
+}
+
+#mobile_menu{
+    display: none;
+    height: 40px;
+    line-height: 40px;
+    background-color: magenta;
+}
+
+#mobile_menu ul{
+    display: flex;
+    justify-content: center;
+}
+
+#mobile_menu ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+#mobile_menu ul li{
+    list-style: none;
+    padding: 0 5px 0 5px;
+}
+
+
+
+@media screen and (max-width: 768px){
+    #mobile_menu{
+        display: block;
+    }
+
+    #navbar ul{
+        display: none;
+    }
+
+    html{
+        font-size: 90%;
+    }
+}
+
+@media screen and (max-width: 370px){
+    html{
+        font-size: 70%;
+    }
+}
